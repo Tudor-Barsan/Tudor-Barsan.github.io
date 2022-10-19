@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+      <meta charset="UTF-8">
+      <meta name ="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Tudor Barsan's Website</title>
+      <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+      <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" 
+      integrity="sha256-46qynGAkLSFpVbEBog43gvNhfrOj+BmwXdxFgVK/Kvc=" crossorigin="anonymous" />
+
+      <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,900|Source+Sans+Pro:300,900&display=swap" rel="stylesheet">
+
+      <link rel="stylesheet" href="css/style.css">
+
+      <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+  </head>
+
+  <body>
+    <header>
+      <div class="top-left">
+        <div class="logo" data-aos="fade-up" data-aos-duration="1000">
+          <img src="Images/TBlogo.png" id="logo" alt="">
+        </div>
+        <div class="inputBox" data-aos="fade-up" data-aos-duration="1000">
+          <input type="checkbox" name="theme">
+        </div>
+      </div>
+        <button class="nav-toggle" aria-label="toggle navigation" data-aos="fade-up" data-aos-duration="1000">
+          <span class="hamburger"></span>
+        </button>
+        <nav class="nav">
+          <ul class="nav__list">
+            <li class="nav__item"><a href="#home" class="nav__link">Home</a></li>
+            <li class="nav__item"><a href="#about" class="nav__link">About Me</a></li>
+            <li class="nav__item"><a href="#work" class="nav__link">My Work</a></li>
+          </ul>
+        </nav>
+    </header>
+
+    <!-- Introduction -->
+    <section class="intro" id="home" data-aos="fade-up" data-aos-duration="1000">
+      <h1 class="section__title section__title--intro">
+        Hi, I am <strong>Tudor Barsan</strong> 
+      </h1>
+      <p class="section__subtitle section__subtitle--intro">Aspiring Software Developer</p>
+      <img src="Images/My project-1 (1).png" alt="A picture of Tudor Barsan" class="intro__img">
+      <ul class="social-list social-list__head">
+        <li class="social-list__item">
+            <a class="social-list__link" href="https://github.com/Tudor-Barsan">
+                <i class="fab fa-github"></i>
+            </a>
+        </li>
+        <li class="social-list__item">
+            <a class="social-list__link" href="https://www.linkedin.com/in/tudor-barsan/">
+                <i class="fab fa-linkedin"></i>
+            </a>
+        </li>
+        <li class="social-list__item">
+          <a class="social-list__link" href="mailto:tudor.barsan46@gmail.com">
+              <i class="fas fa-envelope"></i>
+          </a>
+        </li>
+      </ul>
+    </section>
+
+    <!-- About Me-->
+    <section class="about-me" id="about">
+        <h2 class="section__title section__title--about" data-aos="fade-up" data-aos-duration="1000"> About me</h2>
+        <p class="section__subtitle section__subtitle--about" data-aos="fade-up" data-aos-duration="1000">Computer Science Student @ UWaterloo</p>
+        <div class="about--me__body">
+          <p data-aos="fade-up" data-aos-duration="1000">Hi! My name is Tudor Barsan and I am a Computer Science student at the University of Waterloo currently in my 1A term.</p>
+          <p data-aos="fade-up" data-aos-duration="1000">I love programming and working with new technologies. Recently, I have been working with HTML, CSS and JavaScript to create responsive websites and interactive games. I enjoy applying my problem-solving skills through competing in coding challenges and programming competitions using Python.</p>
+          <p data-aos="fade-up" data-aos-duration="1000">When I'm not coding, I take pride in playing traveling, as well as playing soccer, basketball and volleyball with friends.</p>
+          <p data-aos="fade-up" data-aos-duration="1000">For any inquiries or a copy of my resume, please contact me through my email linked in the mail icon or at the bottom of my website.</p>
+        </div>
+
+        <img src="Images/Tudor Soccer.png" alt="A Picture of Tudor Playing Soccer" class="about-me__img" data-aos="fade-up" data-aos-duration="1000">
+    </section>
+
+    <!-- My work-->
+    <section class="my-work", id="work">
+      <h2 class="section__title" data-aos="fade-up" data-aos-duration="1000">My work</h2>
+      <p class="section__subtitle section__subtitle--work" data-aos="fade-up" data-aos-duration="1000">A range of my completed projects</p>
+      
+      <div class="portfolio">
+        <!--Portfolio Img 1-->
+        <div class="portfolio__item" data-aos="fade-up" data-aos-duration="1000">
+         <a href="https://github.com/TudorBarsan/Personal-Website.git" class="portfolio__link">
+          <img src="Images/Website Image.png" alt="Personal Website" style="width:100%" class="portfolio__img">
+          <div class="container">
+            <h4><b>Personal Website</b></h4>
+            <p>My own personal website. Made with pure HTML, CSS and Javascript. It incorporates many interactive features, such as a menu screen and a toggle between light and dark mode. Click for more!</p>
+          </div>
+         </a>
+        </div>
+
+        <!--Portfolio Img 2-->
+        <div class="portfolio__item" data-aos="fade-up" data-aos-duration="1000">
+         <a href="https://github.com/TudorBarsan/Ultimate-Tic-Tac-Toe.git" class="portfolio__link">
+          <img src="Images/Tic Tac Toe Pic - Copy.PNG" alt="Ultimate Tic Tac Toe" style="width:100%" class="portfolio__img">
+          <div class="container">
+            <h4><b>Ultimate Tic Tac Toe</b></h4>
+            <p>A fun twist on the classic Tic Tac Toe game, made with HTMl, CSS and Javascript. Both players play on a five by five gird and must get four in a row to win. The game includes unique hover effects as well as an end game screen. Click for more!</p>
+          </div>
+         </a>
+        </div>
+
+        <!--Portfolio Img 3-->
+        <div class="portfolio__item" data-aos="fade-up" data-aos-duration="1000">
+         <a href="https://github.com/TudorBarsan/Console-Casino.git" class="portfolio__link">
+          <img src="Images/Casino Game.png" alt="Console Casino" style="width:100%" class="portfolio__img">
+          <div class="container">
+            <h4><b>Console Casino</b></h4>
+            <p>With five games to play, including an exclusive V.I.P. game, Console Casino is a intense casino game made entirely in the Python language and is played inside the Python console. Click for more!</p>
+          </div>
+         </a>
+        </div>
+
+        <!--Portfolio Img 4-->
+        <div class="portfolio__item" data-aos="fade-up" data-aos-duration="1000">
+         <a href="https://github.com/TudorBarsan/Canadian-Computing-Competition-Solutions.git" class="portfolio__link">
+          <img src="Images/CCC Code.PNG" alt="Tic Tac Toe" style="width:100%" class="portfolio__img">
+          <div class="container">
+            <h4><b>Canadian Computing Competition Solutions</b></h4>
+            <p>In preparation for the University of Waterloo's Canadian Computing Competition, I have created full solutions to problems ranging from J1 to S5 difficulty in past contests from years 2003 to 2021. All solutions are in Python. Click for more!</p>
+          </div>
+         </a>
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+      <a href="mailto:tudor.barsan46@gmail.com" class="footer__link">tudor.barsan46@gmail.com</a>
+      <ul class="social-list">
+          <li class="social-list__item">
+              <a class="social-list__link" href="https://github.com/Tudor-Barsan">
+                  <i class="fab fa-github"></i>
+              </a>
+          </li>
+          <li class="social-list__item">
+              <a class="social-list__link" href="https://www.linkedin.com/in/tudor-barsan/">
+                  <i class="fab fa-linkedin"></i>
+              </a>
+          </li>
+      </ul>
+    </footer>
+
+    <script src="js/index.js"></script>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+
+  </body>
+</html>
