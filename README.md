@@ -1,3 +1,4 @@
-# https://tudor-barsan.github.io/
+# 💡 <a href="https://tudor-barsan.github.io/"> Personal Website </a> 
+My own personal website made to showcase myself as well as my projects
 
-Hosted my personal website using GitHub Pages
+Designed using Figma and built entirely from scratch with HTML, CSS and JavaScript
