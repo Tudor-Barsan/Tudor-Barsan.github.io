@@ -71,6 +71,7 @@ section {
 img {
     display: block;
     max-width: 100%;
+    border-radius: 10px;
 }
 
 strong { font-weight: var(--fw-bold) }
