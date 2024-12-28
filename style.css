@@ -379,7 +379,7 @@ input[type="checkbox"]:checked {
   color: var(--clr-dark);
   text-align: center;
   display: flex;
-flex-direction: column;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
 }
@@ -498,4 +498,8 @@ flex-direction: column;
     grid-template-columns: repeat(1, 1fr);
     row-gap: 3.5em;
   }
+}
+
+.spacer {
+  height: 32px;
 }
