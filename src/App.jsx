@@ -114,7 +114,7 @@ export default function App() {
       <header className="top-nav">
         <span className="nav-name">Tudor</span>
         <nav className="nav-links">
-          <MagneticIcon href="tudor.barsan46@gmail.com" label="Email">
+          <MagneticIcon href="mailto:tudor.barsan46@gmail.com" label="Email">
             <MailIcon />
           </MagneticIcon>
           <MagneticIcon href="https://linkedin.com/in/tudor-barsan" label="LinkedIn">
