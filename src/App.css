@@ -1,0 +1,356 @@
+/* === Layout === */
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 60px 32px 120px;
+  position: relative;
+}
+
+/* === Cursor glow === */
+.cursor-glow {
+  pointer-events: none;
+  position: fixed;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(168, 144, 112, 0.22) 0%,
+    transparent 65%
+  );
+  transform: translate(-50%, -50%);
+  transition:
+    left 0.1s ease,
+    top 0.1s ease;
+  z-index: 200;
+  mix-blend-mode: multiply;
+}
+
+/* === Fade-in === */
+.fade-in {
+  opacity: 0;
+  transform: translateY(14px);
+  transition:
+    opacity 0.65s ease,
+    transform 0.65s ease;
+}
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ══════════════════════════════
+   TOP NAV
+══════════════════════════════ */
+.top-nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 32px;
+  max-width: 900px;
+  margin: 0 auto;
+  background: rgba(250, 248, 244, 0.88);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.nav-name {
+  font-family: "EB Garamond", Georgia, serif;
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: var(--ink);
+  letter-spacing: 0.01em;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.nav-links a:not(.magnetic-icon) {
+  font-family: "Inter", sans-serif;
+  font-size: 0.82rem;
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  color: #666;
+  text-decoration: none;
+  text-transform: lowercase;
+  transition: color 0.2s ease;
+  position: relative;
+}
+
+.nav-links a:not(.magnetic-icon)::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0;
+  height: 1px;
+  background: var(--accent-1);
+  transition: width 0.22s ease;
+}
+
+.nav-links a:not(.magnetic-icon):hover {
+  color: var(--accent-1);
+}
+
+.nav-links a:not(.magnetic-icon):hover::after {
+  width: 100%;
+}
+
+.nav-divider {
+  width: 1px;
+  height: 16px;
+  background: #ddd;
+}
+
+/* ══════════════════════════════
+   HERO
+══════════════════════════════ */
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 380px;
+  gap: 48px;
+  align-items: center;
+  margin-bottom: 64px;
+  padding-top: 20px;
+}
+
+
+.hero-eyebrow {
+  font-family: "Inter", sans-serif;
+  font-size: 0.95rem;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent-1);
+  margin-bottom: 12px;
+}
+
+.hero-name {
+  font-family: "EB Garamond", Georgia, serif;
+  font-size: clamp(2.8rem, 5.5vw, 4.2rem);
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+  margin-bottom: 24px;
+  white-space: nowrap;
+}
+
+.hero-bio {
+  font-size: 1rem;
+  font-family: "Inter", sans-serif;
+  font-weight: 300;
+  line-height: 1.75;
+  color: #444;
+  max-width: 480px;
+  margin-bottom: 28px;
+}
+
+/* === Typewriter cursor === */
+.cursor-blink {
+  animation: blink 0.9s step-end infinite;
+  color: var(--accent-1);
+  font-weight: 300;
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+/* === Hero photo === */
+.hero-photo {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 2px solid rgba(122, 106, 84, 0.12);
+  transition:
+    transform 0.4s ease,
+    box-shadow 0.4s ease;
+  transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.hero-photo:hover {
+  transform: translateY(-4px) rotate(0.5deg);
+  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.1);
+}
+
+.hero-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  image-rendering: auto;
+  transform: translateZ(0);
+}
+
+.photo-placeholder {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(160deg, #c8bfb0 0%, #a89880 40%, #7a6a54 100%);
+}
+
+/* ══════════════════════════════
+   DIVIDER
+══════════════════════════════ */
+.divider-line {
+  width: 48px;
+  height: 1px;
+  background: rgba(122, 106, 84, 0.3);
+  margin-bottom: 52px;
+}
+
+/* ══════════════════════════════
+   SECTIONS
+══════════════════════════════ */
+.section {
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  gap: 0 40px;
+  margin-bottom: 52px;
+}
+
+.section-heading {
+  font-family: "EB Garamond", Georgia, serif;
+  font-size: 0.95rem;
+  font-weight: 400;
+  font-style: italic;
+  color: #999;
+  padding-top: 4px;
+  letter-spacing: 0.01em;
+}
+
+/* === Entries === */
+.entries {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.entry {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.entry-tag {
+  font-family: "Inter", sans-serif;
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent-2);
+  background: rgba(155, 123, 106, 0.08);
+  border-radius: 4px;
+  padding: 3px 8px;
+  white-space: nowrap;
+  margin-top: 3px;
+  flex-shrink: 0;
+}
+
+.entry p {
+  font-size: 1rem;
+  font-family: "Inter", sans-serif;
+  font-weight: 300;
+  line-height: 1.75;
+  color: #333;
+  margin: 0;
+}
+
+.aside {
+  color: var(--muted);
+  font-style: italic;
+  font-size: 0.9em;
+}
+
+/* === Accent text (coloured, no underline) === */
+.accent-text {
+  color: var(--accent-2);
+}
+
+/* === Links === */
+.underline-link {
+  text-decoration: none;
+  border-bottom: 1px solid rgba(155, 123, 106, 0.4);
+  color: var(--accent-2);
+  transition:
+    border-color 0.2s ease,
+    color 0.2s ease;
+  padding-bottom: 1px;
+}
+
+.underline-link:hover {
+  border-bottom-color: var(--accent-1);
+  color: var(--accent-1);
+}
+
+/* ══════════════════════════════
+   MAGNETIC ICONS (nav)
+══════════════════════════════ */
+.magnetic-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  color: #888;
+  transition:
+    color 0.2s ease,
+    transform 0.15s ease;
+  will-change: transform;
+  cursor: pointer;
+}
+
+.magnetic-icon:hover {
+  color: var(--accent-1);
+}
+
+/* ══════════════════════════════
+   RESPONSIVE
+══════════════════════════════ */
+@media (max-width: 640px) {
+  .hero {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .hero-photo {
+    aspect-ratio: 4 / 3;
+    max-width: 100%;
+  }
+
+  .hero-name {
+    font-size: clamp(3rem, 12vw, 4rem);
+  }
+
+  .section {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .section-heading {
+    padding-top: 0;
+  }
+
+  .top-nav {
+    padding: 14px 20px;
+  }
+
+  .nav-links {
+    gap: 16px;
+  }
+}
